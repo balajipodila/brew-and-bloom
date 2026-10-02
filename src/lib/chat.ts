@@ -1,11 +1,14 @@
 export type ChatMessage = { role: 'user' | 'assistant'; content: string }
 
+const apiBaseUrl = import.meta.env.VITE_API_URL?.replace(/\/$/, '') ?? ''
+
 export async function streamBaristaReply(
   messages: ChatMessage[],
   onChunk: (chunk: string) => void,
   signal?: AbortSignal,
 ) {
-  const response = await fetch('/api/chat', {
+  const url = apiBaseUrl ? `${apiBaseUrl}/api/chat` : '/api/chat'
+  const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ messages }),

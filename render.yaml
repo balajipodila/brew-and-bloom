@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: brew-and-bloom-api
+    env: node
+    plan: free
+    rootDir: .
+    buildCommand: npm install
+    startCommand: PORT=$PORT npm run start:server
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3001"
+      - key: FRONTEND_URL
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_API_URL
+        sync: false
+      - key: AI_MODEL
+        value: gpt-4o-mini

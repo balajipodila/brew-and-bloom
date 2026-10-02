@@ -1,6 +1,9 @@
 node_modules/
-dist/
 .env
 .env.*
 !.env.example
+.next/
+dist/
+__pycache__/
+venv/
 *.tsbuildinfo

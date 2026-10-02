@@ -3,10 +3,35 @@ import express from 'express'
 import { menu } from '../src/data/menu'
 
 const app = express()
-const port = Number(process.env.API_PORT ?? 3001)
+const port = Number(process.env.PORT ?? process.env.API_PORT ?? 3001)
 const rateWindows = new Map<string, { count: number; resetAt: number }>()
 
+const parseAllowedOrigins = () => {
+  const configured = (process.env.FRONTEND_URL ?? '')
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean)
+
+  return new Set([...configured, 'http://localhost:3000'])
+}
+
 app.use(express.json({ limit: '12kb' }))
+app.use((req, res, next) => {
+  const origin = typeof req.headers.origin === 'string' ? req.headers.origin : ''
+  if (origin && parseAllowedOrigins().has(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin)
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    res.setHeader('Access-Control-Allow-Credentials', 'true')
+  }
+
+  if (req.method === 'OPTIONS') {
+    res.status(204).end()
+    return
+  }
+
+  next()
+})
 app.use('/api', (req, res, next) => {
   const key = req.ip ?? 'unknown'
   const now = Date.now()
@@ -98,4 +123,4 @@ app.post('/api/chat', async (req, res) => {
   }
 })
 
-app.listen(port, () => console.log(`Brew & Bloom API listening on http://localhost:${port}`))
+app.listen(port, '0.0.0.0', () => console.log(`Brew & Bloom API listening on http://0.0.0.0:${port}`))

@@ -9,6 +9,8 @@
     "dev:server": "tsx watch server/index.ts",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
+    "start:server": "tsx server/index.ts",
+    "start": "npm run start:server",
     "typecheck": "tsc -b --pretty"
   },
   "dependencies": {
