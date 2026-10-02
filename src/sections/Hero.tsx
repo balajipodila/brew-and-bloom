@@ -13,10 +13,10 @@ export function Hero() {
       <div className="hero__grain" />
       <div className="hero__content">
         <motion.div className="hero__copy" initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.15 }}>
-          <span className="hero-kicker"><span /> YOUR NEIGHBORHOOD, A LITTLE SLOWER</span>
-          <h1>A softer start<br />to <em>every day.</em></h1>
-          <p>Thoughtfully sourced coffee, something lovely from the oven, and room to stay a while.</p>
-          <div className="hero-actions"><a className="button button--light" href="#menu">Find your favorite <ArrowUpRight size={16} /></a><a className="hero-text-link" href="#story">Our little story <span>↗</span></a></div>
+          <span className="hero-kicker"><span /> PORTLAND ROASTERY • DAILY BAKERY</span>
+          <h1>Slow mornings,<br />beautiful <em>coffee.</em></h1>
+          <p>Thoughtfully sourced beans, fresh pastries, and a warm corner for the kind of conversations that linger.</p>
+          <div className="hero-actions"><a className="button button--light" href="#reserve">Reserve a table <ArrowUpRight size={16} /></a><a className="hero-text-link" href="#menu">See the menu <span>↗</span></a></div>
         </motion.div>
       </div>
       <motion.div className="hero-stamp" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.8, duration: 0.7 }}>

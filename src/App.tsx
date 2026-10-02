@@ -21,6 +21,20 @@ export default function App() {
     <main>
       <Hero />
       <Story />
+      <div className="feature-strip">
+        <div>
+          <span>Small-batch roasts</span>
+          <strong>Ethically sourced and roasted weekly.</strong>
+        </div>
+        <div>
+          <span>Fresh from the oven</span>
+          <strong>Pastries baked before sunrise.</strong>
+        </div>
+        <div>
+          <span>Open daily</span>
+          <strong>7am–4pm weekdays · 8am–3pm weekends</strong>
+        </div>
+      </div>
       <MenuSection />
       <AIBarista />
       <Suspense fallback={<div className="section-loading" aria-label="Loading gallery" />}><Gallery /></Suspense>

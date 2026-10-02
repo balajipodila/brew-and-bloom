@@ -134,6 +134,36 @@ img { display: block; max-width: 100%; }
 .story-stats strong span { color: var(--accent); }
 .story-stats small { color: var(--ink-soft); font-size: 10px; letter-spacing: .3px; }
 
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1440px;
+  margin: -8px auto 0;
+  padding: 0 max(6.2vw, 28px);
+}
+.feature-strip > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 32px rgba(45, 33, 25, 0.04);
+}
+.feature-strip span {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+.feature-strip strong {
+  color: var(--ink);
+  font: 500 16px/1.4 'Playfair Display', serif;
+}
+
 /* Menu */
 .menu-section { background: var(--paper-soft); }
 .menu-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
@@ -310,6 +340,7 @@ img { display: block; max-width: 100%; }
   .nav-actions { gap: 8px; }.theme-toggle { width: 34px; height: 34px; }.nav-reserve { gap: 6px; padding: 10px 10px; font-size: 9px; }.mobile-menu { display: inline-grid; width: 34px; height: 34px; }
   .hero { min-height: max(680px, 100svh); align-items: center; }.hero__backdrop { background-position: 59% center; }.hero__shade { background: linear-gradient(90deg, rgba(28,23,19,.76), rgba(30,24,19,.37)), linear-gradient(0deg, rgba(28,23,19,.45), transparent 40%); }.hero__content { padding: 75px 26px 75px; }.hero h1 { font-size: clamp(62px, 15vw, 88px); }.hero-kicker { max-width: 280px; font-size: 8px; line-height: 1.7; }.hero__copy > p { max-width: 340px; font-size: 13px; }.hero-actions { flex-wrap: wrap; gap: 18px; margin-top: 27px; }.hero-stamp { right: 22px; bottom: 95px; width: 84px; height: 84px; }.hero-stamp span { font-size: 7px; }.hero-stamp > svg { width: 12px; }.hero-bottom { right: 20px; bottom: 18px; left: 20px; font-size: 7px; }.hero-bottom a { width: 32px; height: 32px; }.steam { display: none; }
   .story { grid-template-columns: 1fr; row-gap: 36px; padding-top: 78px; }.story__image-wrap { max-width: none; min-height: 0; }.story__image-wrap > img { height: 350px; min-height: 0; }.story-seal { left: -8px; width: 65px; height: 65px; }.story__content { padding-top: 0; }.story-stats { gap: 10px; padding-top: 22px; }.story-stats > div { padding-left: 12px; }.story-stats strong { font-size: 30px; }.story-stats small { max-width: 90px; font-size: 8px; line-height: 1.5; }
+  .feature-strip { grid-template-columns: 1fr; gap: 12px; padding: 0 24px; }.feature-strip > div { padding: 16px 18px; }
   .menu-heading { align-items: flex-start; flex-direction: column; gap: 20px; }.menu-full-link { margin: 0; }.menu-tabs { gap: 25px; margin: 37px 0 20px; }.menu-tab { font-size: 14px; }.menu-grid { gap: 10px; }.menu-card { border-radius: 8px; }.menu-card__image { height: clamp(135px, 42vw, 210px); }.menu-tag { top: 8px; left: 8px; padding: 5px 7px; font-size: 7px; }.menu-card__body { min-height: 145px; padding: 13px 11px; }.menu-card__title h3 { font-size: 14px; }.menu-card__title > span { font-size: 10px; }.menu-card__body > p { font-size: 9px; }.menu-note { text-align: left; }
   .barista-section { grid-template-columns: 1fr; gap: 32px; }.barista-orbit { margin-bottom: 25px; }.quiz-panel { min-height: 0; padding: 22px 19px; }.quiz-options { gap: 7px; }.quiz-option { min-height: 45px; padding: 0 10px; font-size: 10px; }.quiz-question h3 { font-size: 21px; }.quiz-label, .quiz-step { font-size: 7px; }.quiz-footnote { line-height: 1.6; }
   .gallery-heading { align-items: flex-start; flex-direction: column; gap: 15px; }.gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, minmax(145px, 42vw)); gap: 8px; }.gallery-wide { grid-column: span 1; }.gallery-tall { grid-row: span 2; }.gallery-tile { border-radius: 4px; }.lightbox { padding: 60px 45px; }.lightbox-prev { left: 8px; }.lightbox-next { right: 8px; }.lightbox-close { top: 12px; right: 12px; }.lightbox-arrow, .lightbox-close { width: 36px; height: 36px; }
