@@ -13,7 +13,7 @@ export function Hero() {
       <div className="hero__grain" />
       <div className="hero__content">
         <motion.div className="hero__copy" initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.15 }}>
-          <span className="hero-kicker"><span /> PORTLAND ROASTERY • DAILY BAKERY</span>
+          <span className="hero-kicker"><span /> HYDERABAD ROASTERY • DAILY BAKERY</span>
           <h1>Slow mornings,<br />beautiful <em>coffee.</em></h1>
           <p>Thoughtfully sourced beans, fresh pastries, and a warm corner for the kind of conversations that linger.</p>
           <div className="hero-actions"><a className="button button--light" href="#reserve">Reserve a table <ArrowUpRight size={16} /></a><a className="hero-text-link" href="#menu">See the menu <span>↗</span></a></div>
@@ -22,7 +22,7 @@ export function Hero() {
       <motion.div className="hero-stamp" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.8, duration: 0.7 }}>
         <Sparkles size={15} /><span>GOOD COFFEE.<br />GOOD COMPANY.</span>
       </motion.div>
-      <div className="hero-bottom"><span>PORTLAND, OREGON · EST. 2018</span><a href="#story" aria-label="Scroll to our story"><ArrowDown size={18} /></a><span>45°31' N&nbsp; 122°40' W</span></div>
+      <div className="hero-bottom"><span>HYDERABAD, TELANGANA · EST. 2018</span><a href="#story" aria-label="Scroll to our story"><ArrowDown size={18} /></a><span>17°24' N&nbsp; 78°29' E</span></div>
       <div className="steam steam--one" /><div className="steam steam--two" />
     </section>
   )

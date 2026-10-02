@@ -5,7 +5,7 @@ import { SectionHeading } from '../components/SectionHeading'
 
 const reviews = [
   { quote: 'The kind of place that remembers your name and somehow makes Tuesday feel like a small occasion.', name: 'Mara L.', note: 'A regular since 2020' },
-  { quote: 'Best morning bun in Portland, and the people behind the counter make the whole neighborhood feel warmer.', name: 'Elliot R.', note: 'Local guide' },
+  { quote: 'Best morning bun in Hyderabad, and the people behind the counter make the whole neighbourhood feel warmer.', name: 'Elliot R.', note: 'Local guide' },
   { quote: 'I came in for a coffee and stayed three hours. The light, the playlist, the cardamom latte. All of it.', name: 'June K.', note: 'Visited last week' },
 ]
 
